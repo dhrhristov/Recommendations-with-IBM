@@ -15532,6 +15532,7 @@ The top 10 recommendations for user 20 are the following article names:
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Provide your response here.</strong></p>
+<p>as per point 2) suggestion we have used Numpy's SVD (rather than FunkSVD) because we auto filled in user-item matrix with zeros. In this case, we are impute with zero because as zero is equal to represents that the user has not interacted with this article.</p>
 
 </div>
 </div>
@@ -16002,7 +16003,16 @@ The top 10 recommendations for user 20 are the following article names:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Your respon*</strong> The accuracy is around 94% for close to  290 latent features, based on 20 users.***</p>
+<p><strong><em>Your response</em></strong></p>
+<p>From the plot in point 5, we can observe that Test Accuracy decreases with the increase in Number of Latent Features even though Training Accuracy is seen increasing. Based on this, we can conclude that accuracy is not proper after 300 users, since the predicted interactions is imbalanced between users and articles.</p>
+<p>1) We have used Collaborative filtering recommendations to recommend a random user which article might be interesing. 2) We have also used SVD method for recommendations. But this method worked best when respective user had previous article interactions.</p>
+<p>Based on the analysis performed we can see that 20 users had previous interactions with articales while majority of the rest users 600+ did not have interactions.</p>
+<p>As we have disbalance, we have used article Rank recommendation, where the article Ranks comes from total number of reads or the most interacted article with.</p>
+<p>A/B Test can be used to select the between the method to be used for model and can improve on it.</p>
+<p>Users data can be equally divided randomly to keep aside biases factor.
+Different hypothesis test can be performed with both the divided users data group.
+Recommendated and Control groups tests can be observed for further analysis.</p>
+<p>Tests will not be performed as not required.</p>
 
 </div>
 </div>
